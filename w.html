@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>IMAGE CLASSFICATION</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+  background-image: url("image bcktnd.png");
+  background-color: #cccccc;
+  height: 500px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+</style>
+</head>
+<body>
+</body>
+</html>
+<div class="container">
+  <h1 class="jumbotron bg-primary">IMAGE CLASSFICATION</h1>
+  <br><br>
+  <form class="form-horizontal" action="/submit" method="post" enctype="multipart/form-data">
+
+    <div class="form-group">
+      
+      <label style="color:white;" class="control-label col-sm-2" for="pwd">Upload Image Here:</label>
+      <div class="col-sm-10">          
+        <input type="file" class="form-control" placeholder="Hours Studied"  name="my_image" id="pwd">
+      </div>
+    </div>
+
+    <div class="form-group">        
+      <div class="col-sm-offset-2 col-sm-10">
+        <button type="submit" class="btn btn-success">Click Me </button>
+      </div>
+    </div>
+  </form>
+	{% if prediction %}
+  <img src="{{img_path}}" height="400px" width="400px">
+	<h1 style="background-color:LightGray;"> The Prediction of image is : <i> </i></h1>
+
+	{% endif %}
+</div>
+</body>
+</html>
